@@ -37,18 +37,77 @@ export default function Hero() {
                         </span>
                     </motion.div>
 
-                    {/* Headline */}
+                    {/* Headline with Word-by-Word Reveal */}
                     <motion.h1
                         initial="hidden"
                         animate="visible"
-                        variants={slideUp}
+                        variants={{
+                            hidden: { opacity: 0 },
+                            visible: {
+                                opacity: 1,
+                                transition: {
+                                    staggerChildren: 0.08,
+                                    delayChildren: 0.1,
+                                },
+                            },
+                        }}
                         className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-black mb-4 sm:mb-6 leading-tight px-2 sm:px-0"
                     >
-                        Transform Customer Experience with{" "}
-                        <span className="text-brand-primary">
-                            Enterprise-Grade
-                        </span>{" "}
-                        Solutions
+                        {["Transform", "Customer", "Experience", "with"].map(
+                            (word, index) => (
+                                <motion.span
+                                    key={index}
+                                    variants={{
+                                        hidden: {
+                                            opacity: 0,
+                                            y: 30,
+                                            filter: "blur(10px)",
+                                        },
+                                        visible: {
+                                            opacity: 1,
+                                            y: 0,
+                                            filter: "blur(0px)",
+                                            transition: {
+                                                duration: 0.6,
+                                                ease: [0.22, 1, 0.36, 1],
+                                            },
+                                        },
+                                    }}
+                                    className="inline-block mr-3 sm:mr-4"
+                                >
+                                    {word}
+                                </motion.span>
+                            ),
+                        )}
+                        <br className="hidden sm:block" />
+                        {["Enterprise-Grade", "Solutions"].map(
+                            (word, index) => (
+                                <motion.span
+                                    key={index + 4}
+                                    variants={{
+                                        hidden: {
+                                            opacity: 0,
+                                            y: 30,
+                                            filter: "blur(10px)",
+                                        },
+                                        visible: {
+                                            opacity: 1,
+                                            y: 0,
+                                            filter: "blur(0px)",
+                                            transition: {
+                                                duration: 0.6,
+                                                ease: [0.22, 1, 0.36, 1],
+                                            },
+                                        },
+                                    }}
+                                    className={`inline-block mr-3 sm:mr-4 ${
+                                        index === 0 ? "text-brand-primary" : ""
+                                    }`}
+                                >
+                                    {word}
+                                </motion.span>
+                            ),
+                        )}
                     </motion.h1>
 
                     {/* Subheadline */}
@@ -98,12 +157,20 @@ export default function Hero() {
                         </Link>
                     </motion.div>
 
-                    {/* Trust Indicators */}
+                    {/* Trust Indicators with Enhanced Animations */}
                     <motion.div
                         initial="hidden"
                         animate="visible"
-                        variants={fadeIn}
-                        transition={{ delay: 0.6 }}
+                        variants={{
+                            hidden: { opacity: 0 },
+                            visible: {
+                                opacity: 1,
+                                transition: {
+                                    staggerChildren: 0.1,
+                                    delayChildren: 0.6,
+                                },
+                            },
+                        }}
                         className="grid grid-cols-2 md:grid-cols-4 gap-6 sm:gap-8 max-w-4xl mx-auto px-4 sm:px-0"
                     >
                         {[
@@ -112,14 +179,44 @@ export default function Hero() {
                             { value: "98%", label: "Client Satisfaction" },
                             { value: "24/7", label: "Global Support" },
                         ].map((stat, index) => (
-                            <div key={index} className="text-center">
-                                <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-brand-primary mb-1 sm:mb-2">
+                            <motion.div
+                                key={index}
+                                variants={{
+                                    hidden: {
+                                        opacity: 0,
+                                        scale: 0.3,
+                                        y: 50,
+                                    },
+                                    visible: {
+                                        opacity: 1,
+                                        scale: 1,
+                                        y: 0,
+                                        transition: {
+                                            type: "spring",
+                                            damping: 12,
+                                            stiffness: 100,
+                                        },
+                                    },
+                                }}
+                                whileHover={{
+                                    scale: 1.1,
+                                    transition: { duration: 0.2 },
+                                }}
+                                className="text-center cursor-default"
+                            >
+                                <motion.div
+                                    className="text-2xl sm:text-3xl md:text-4xl font-bold text-brand-primary mb-1 sm:mb-2"
+                                    whileHover={{
+                                        scale: 1.2,
+                                        transition: { duration: 0.2 },
+                                    }}
+                                >
                                     {stat.value}
-                                </div>
+                                </motion.div>
                                 <div className="text-xs sm:text-sm text-gray-600">
                                     {stat.label}
                                 </div>
-                            </div>
+                            </motion.div>
                         ))}
                     </motion.div>
                 </div>

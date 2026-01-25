@@ -3,7 +3,12 @@
 import React from "react";
 import { motion } from "framer-motion";
 import Card from "@/components/ui/Card";
-import { staggerContainer, staggerItem } from "@/lib/animations";
+import {
+    staggerContainer,
+    staggerItem,
+    bounceIn,
+    pulse,
+} from "@/lib/animations";
 import { Globe, Shield, TrendingUp, Clock, Zap, Award } from "lucide-react";
 
 const features = [
@@ -88,12 +93,22 @@ export default function WhyChooseUs() {
                     {features.map((feature, index) => {
                         const Icon = feature.icon;
                         return (
-                            <motion.div key={index} variants={staggerItem}>
+                            <motion.div key={index} variants={bounceIn}>
                                 <Card padding="lg" className="h-full">
-                                    {/* Icon */}
-                                    <div className="w-14 h-14 bg-brand-primary/10 rounded-lg flex items-center justify-center mb-5">
+                                    {/* Icon with Pulse Animation */}
+                                    <motion.div
+                                        className="w-14 h-14 bg-brand-primary/10 rounded-lg flex items-center justify-center mb-5"
+                                        initial="initial"
+                                        animate="animate"
+                                        variants={pulse}
+                                        whileHover={{
+                                            scale: 1.2,
+                                            rotate: 360,
+                                            transition: { duration: 0.5 },
+                                        }}
+                                    >
                                         <Icon className="w-7 h-7 text-brand-primary" />
-                                    </div>
+                                    </motion.div>
 
                                     {/* Title */}
                                     <h3 className="text-xl font-bold text-black mb-3">

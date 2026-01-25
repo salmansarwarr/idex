@@ -1,6 +1,10 @@
+"use client";
+
 import React from "react";
 import Link from "next/link";
+import { motion } from "framer-motion";
 import { Mail, Phone, MapPin, Linkedin, Twitter, Facebook } from "lucide-react";
+import { scatterContainer, scatterItem, fadeIn } from "@/lib/animations";
 
 const footerLinks = {
     company: [
@@ -92,58 +96,82 @@ export default function Footer() {
                         </div>
                     </div>
 
-                    {/* Company Links */}
-                    <div>
+                    {/* Company Links with Scatter Animation */}
+                    <motion.div
+                        initial="hidden"
+                        whileInView="visible"
+                        viewport={{ once: true, margin: "-100px" }}
+                        variants={scatterContainer}
+                    >
                         <h3 className="text-lg font-semibold mb-4">Company</h3>
                         <ul className="space-y-3">
-                            {footerLinks.company.map((link) => (
-                                <li key={link.name}>
+                            {footerLinks.company.map((link, index) => (
+                                <motion.li
+                                    key={link.name}
+                                    variants={scatterItem}
+                                >
                                     <Link
                                         href={link.href}
-                                        className="text-gray-400 hover:text-white transition-colors"
+                                        className="text-gray-400 hover:text-white transition-colors inline-block"
                                     >
                                         {link.name}
                                     </Link>
-                                </li>
+                                </motion.li>
                             ))}
                         </ul>
-                    </div>
+                    </motion.div>
 
-                    {/* Services Links */}
-                    <div>
+                    {/* Services Links with Scatter Animation */}
+                    <motion.div
+                        initial="hidden"
+                        whileInView="visible"
+                        viewport={{ once: true, margin: "-100px" }}
+                        variants={scatterContainer}
+                    >
                         <h3 className="text-lg font-semibold mb-4">Services</h3>
                         <ul className="space-y-3">
-                            {footerLinks.services.map((link) => (
-                                <li key={link.name}>
+                            {footerLinks.services.map((link, index) => (
+                                <motion.li
+                                    key={link.name}
+                                    variants={scatterItem}
+                                >
                                     <Link
                                         href={link.href}
-                                        className="text-gray-400 hover:text-white transition-colors"
+                                        className="text-gray-400 hover:text-white transition-colors inline-block"
                                     >
                                         {link.name}
                                     </Link>
-                                </li>
+                                </motion.li>
                             ))}
                         </ul>
-                    </div>
+                    </motion.div>
 
-                    {/* Resources Links */}
-                    <div>
+                    {/* Resources Links with Scatter Animation */}
+                    <motion.div
+                        initial="hidden"
+                        whileInView="visible"
+                        viewport={{ once: true, margin: "-100px" }}
+                        variants={scatterContainer}
+                    >
                         <h3 className="text-lg font-semibold mb-4">
                             Resources
                         </h3>
                         <ul className="space-y-3">
-                            {footerLinks.resources.map((link) => (
-                                <li key={link.name}>
+                            {footerLinks.resources.map((link, index) => (
+                                <motion.li
+                                    key={link.name}
+                                    variants={scatterItem}
+                                >
                                     <Link
                                         href={link.href}
-                                        className="text-gray-400 hover:text-white transition-colors"
+                                        className="text-gray-400 hover:text-white transition-colors inline-block"
                                     >
                                         {link.name}
                                     </Link>
-                                </li>
+                                </motion.li>
                             ))}
                         </ul>
-                    </div>
+                    </motion.div>
                 </div>
 
                 {/* Newsletter Section */}
@@ -195,22 +223,37 @@ export default function Footer() {
                             ))}
                         </div>
 
-                        {/* Social Links */}
-                        <div className="flex items-center space-x-4">
+                        {/* Social Links with Scatter Animation */}
+                        <motion.div
+                            initial="hidden"
+                            whileInView="visible"
+                            viewport={{ once: true }}
+                            variants={scatterContainer}
+                            className="flex items-center space-x-4"
+                        >
                             {socialLinks.map((social) => {
                                 const Icon = social.icon;
                                 return (
-                                    <a
+                                    <motion.a
                                         key={social.name}
                                         href={social.href}
+                                        variants={scatterItem}
+                                        whileHover={{
+                                            scale: 1.2,
+                                            rotate: [0, -10, 10, -10, 0],
+                                            transition: {
+                                                duration: 0.5,
+                                            },
+                                        }}
+                                        whileTap={{ scale: 0.9 }}
                                         className="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-brand-primary transition-colors"
                                         aria-label={social.name}
                                     >
                                         <Icon className="w-5 h-5" />
-                                    </a>
+                                    </motion.a>
                                 );
                             })}
-                        </div>
+                        </motion.div>
                     </div>
                 </div>
             </div>

@@ -2,7 +2,7 @@
 
 import React from "react";
 import { motion } from "framer-motion";
-import { staggerContainer, staggerItem } from "@/lib/animations";
+import { scatterContainer, scatterItem, bounceIn } from "@/lib/animations";
 
 const clients = [
     "Microsoft",
@@ -45,35 +45,65 @@ export default function ClientTrust() {
                     initial="hidden"
                     whileInView="visible"
                     viewport={{ once: true, margin: "-100px" }}
-                    variants={staggerContainer}
+                    variants={{
+                        hidden: { opacity: 0 },
+                        visible: {
+                            opacity: 1,
+                            transition: {
+                                staggerChildren: 0.1,
+                                delayChildren: 0.2,
+                            },
+                        },
+                    }}
                     className="text-center mb-16"
                 >
-                    <motion.div variants={staggerItem}>
+                    <motion.div
+                        variants={{
+                            hidden: { opacity: 0, y: 20 },
+                            visible: {
+                                opacity: 1,
+                                y: 0,
+                                transition: { duration: 0.5 },
+                            },
+                        }}
+                    >
                         <span className="text-brand-primary font-semibold text-sm uppercase tracking-wide mb-4 block">
                             Trusted By Industry Leaders
                         </span>
                     </motion.div>
                     <motion.h2
-                        variants={staggerItem}
+                        variants={{
+                            hidden: { opacity: 0, y: 20 },
+                            visible: {
+                                opacity: 1,
+                                y: 0,
+                                transition: { duration: 0.5 },
+                            },
+                        }}
                         className="text-4xl md:text-5xl font-bold text-black mb-6"
                     >
                         Powering Success for Global Enterprises
                     </motion.h2>
                 </motion.div>
 
-                {/* Client Logos */}
+                {/* Client Logos with Scatter Animation */}
                 <motion.div
                     initial="hidden"
                     whileInView="visible"
                     viewport={{ once: true, margin: "-100px" }}
-                    variants={staggerContainer}
+                    variants={scatterContainer}
                     className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-20"
                 >
                     {clients.map((client, index) => (
                         <motion.div
                             key={index}
-                            variants={staggerItem}
-                            className="flex items-center justify-center p-6 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors group"
+                            variants={scatterItem}
+                            whileHover={{
+                                scale: 1.1,
+                                rotate: [0, -5, 5, 0],
+                                transition: { duration: 0.3 },
+                            }}
+                            className="flex items-center justify-center p-6 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors group cursor-pointer"
                         >
                             <span className="text-2xl font-bold text-gray-400 group-hover:text-gray-600 transition-colors">
                                 {client}
@@ -82,19 +112,33 @@ export default function ClientTrust() {
                     ))}
                 </motion.div>
 
-                {/* Testimonials */}
+                {/* Testimonials with Bounce Animation */}
                 <motion.div
                     initial="hidden"
                     whileInView="visible"
                     viewport={{ once: true, margin: "-100px" }}
-                    variants={staggerContainer}
+                    variants={{
+                        hidden: { opacity: 0 },
+                        visible: {
+                            opacity: 1,
+                            transition: {
+                                staggerChildren: 0.15,
+                                delayChildren: 0.2,
+                            },
+                        },
+                    }}
                     className="grid grid-cols-1 md:grid-cols-3 gap-8"
                 >
                     {testimonials.map((testimonial, index) => (
                         <motion.div
                             key={index}
-                            variants={staggerItem}
-                            className="bg-gray-50 rounded-xl p-8 relative"
+                            variants={bounceIn}
+                            whileHover={{
+                                y: -10,
+                                boxShadow: "0 20px 40px rgba(0,0,0,0.1)",
+                                transition: { duration: 0.3 },
+                            }}
+                            className="bg-gray-50 rounded-xl p-8 relative cursor-pointer"
                         >
                             {/* Quote Icon */}
                             <div className="text-brand-primary text-6xl font-serif mb-4 opacity-20">

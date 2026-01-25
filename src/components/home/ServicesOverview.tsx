@@ -4,7 +4,7 @@ import React from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import Card from "@/components/ui/Card";
-import { staggerContainer, staggerItem } from "@/lib/animations";
+import { staggerContainer, staggerItem, staggerRotate } from "@/lib/animations";
 import { Headphones, Code, Brain, ArrowRight } from "lucide-react";
 
 const services = [
@@ -86,17 +86,26 @@ export default function ServicesOverview() {
                     {services.map((service, index) => {
                         const Icon = service.icon;
                         return (
-                            <motion.div key={index} variants={staggerItem}>
+                            <motion.div key={index} variants={staggerRotate}>
                                 <Link href={service.href}>
                                     <Card
                                         variant="hover"
                                         padding="lg"
                                         className="h-full group border border-transparent hover:border-brand-primary/20"
                                     >
-                                        {/* Icon */}
-                                        <div className="w-16 h-16 bg-brand-primary/10 rounded-xl flex items-center justify-center mb-6 group-hover:bg-brand-primary transition-colors duration-300">
+                                        {/* Icon with Magnetic Hover */}
+                                        <motion.div
+                                            className="w-16 h-16 bg-brand-primary/10 rounded-xl flex items-center justify-center mb-6 group-hover:bg-brand-primary transition-colors duration-300"
+                                            whileHover={{
+                                                scale: 1.15,
+                                                rotate: [0, -10, 10, -10, 0],
+                                                transition: {
+                                                    duration: 0.5,
+                                                },
+                                            }}
+                                        >
                                             <Icon className="w-8 h-8 text-brand-primary group-hover:text-white transition-colors duration-300" />
-                                        </div>
+                                        </motion.div>
 
                                         {/* Title */}
                                         <h3 className="text-2xl font-bold text-black mb-4 group-hover:text-brand-primary transition-colors">
