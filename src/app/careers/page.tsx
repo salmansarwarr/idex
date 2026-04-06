@@ -59,44 +59,7 @@ const benefits = [
     "Team building events",
 ];
 
-const openPositions = [
-    {
-        title: "Senior Software Engineer",
-        department: "Engineering",
-        location: "Remote / New York",
-        type: "Full-time",
-    },
-    {
-        title: "Product Manager",
-        department: "Product",
-        location: "San Francisco",
-        type: "Full-time",
-    },
-    {
-        title: "UX Designer",
-        department: "Design",
-        location: "Remote",
-        type: "Full-time",
-    },
-    {
-        title: "Customer Success Manager",
-        department: "Customer Success",
-        location: "London",
-        type: "Full-time",
-    },
-    {
-        title: "Data Scientist",
-        department: "AI & Analytics",
-        location: "Remote / Singapore",
-        type: "Full-time",
-    },
-    {
-        title: "DevOps Engineer",
-        department: "Engineering",
-        location: "Berlin",
-        type: "Full-time",
-    },
-];
+const openPositions: any[] = [];
 
 export default function CareersPage() {
     return (
@@ -241,26 +204,26 @@ export default function CareersPage() {
                                 <div className="space-y-4">
                                     <div className="flex justify-between items-center">
                                         <span className="text-gray-700">
-                                            Employees Worldwide
+                                            Core Team
                                         </span>
                                         <span className="text-brand-primary font-bold text-2xl">
-                                            5,000+
+                                            10+
                                         </span>
                                     </div>
                                     <div className="flex justify-between items-center">
                                         <span className="text-gray-700">
-                                            Countries
+                                            Working Style
                                         </span>
                                         <span className="text-brand-primary font-bold text-2xl">
-                                            20+
+                                            Remote-First
                                         </span>
                                     </div>
                                     <div className="flex justify-between items-center">
                                         <span className="text-gray-700">
-                                            Diversity
+                                            Culture
                                         </span>
                                         <span className="text-brand-primary font-bold text-2xl">
-                                            60+ Nationalities
+                                            Collaborative
                                         </span>
                                     </div>
                                 </div>
@@ -271,14 +234,14 @@ export default function CareersPage() {
                                 className="bg-gradient-to-br from-brand-primary to-brand-primary-dark text-white"
                             >
                                 <h3 className="text-2xl font-bold mb-4">
-                                    Employee Satisfaction
+                                    Join Our Journey
                                 </h3>
                                 <div className="text-5xl font-bold mb-2">
-                                    4.8/5.0
+                                    100%
                                 </div>
                                 <p className="text-white/90">
-                                    Based on 2,500+ employee reviews on
-                                    Glassdoor
+                                    Commitment to innovation and employee
+                                    well-being from day one
                                 </p>
                             </Card>
                         </motion.div>
@@ -311,50 +274,65 @@ export default function CareersPage() {
                         </motion.p>
                     </motion.div>
 
-                    <motion.div
-                        initial="hidden"
-                        whileInView="visible"
-                        viewport={{ once: true }}
-                        variants={staggerContainer}
-                        className="max-w-5xl mx-auto space-y-4"
-                    >
-                        {openPositions.map((position, index) => (
-                            <motion.div key={index} variants={staggerItem}>
-                                <Card
-                                    padding="lg"
-                                    variant="hover"
-                                    className="cursor-pointer group"
-                                >
-                                    <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
-                                        <div className="flex-1">
-                                            <h3 className="text-xl font-bold text-black mb-2 group-hover:text-brand-primary transition-colors">
-                                                {position.title}
-                                            </h3>
-                                            <div className="flex flex-wrap gap-4 text-sm text-gray-600">
-                                                <div className="flex items-center">
-                                                    <Briefcase className="w-4 h-4 mr-2" />
-                                                    {position.department}
-                                                </div>
-                                                <div className="flex items-center">
-                                                    <Globe className="w-4 h-4 mr-2" />
-                                                    {position.location}
-                                                </div>
-                                                <div className="px-3 py-1 bg-gray-100 rounded-full text-xs font-medium">
-                                                    {position.type}
+                    {openPositions.length > 0 ? (
+                        <motion.div
+                            initial="hidden"
+                            whileInView="visible"
+                            viewport={{ once: true }}
+                            variants={staggerContainer}
+                            className="max-w-5xl mx-auto space-y-4"
+                        >
+                            {openPositions.map((position, index) => (
+                                <motion.div key={index} variants={staggerItem}>
+                                    <Card
+                                        padding="lg"
+                                        variant="hover"
+                                        className="cursor-pointer group"
+                                    >
+                                        <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+                                            <div className="flex-1">
+                                                <h3 className="text-xl font-bold text-black mb-2 group-hover:text-brand-primary transition-colors">
+                                                    {position.title}
+                                                </h3>
+                                                <div className="flex flex-wrap gap-4 text-sm text-gray-600">
+                                                    <div className="flex items-center">
+                                                        <Briefcase className="w-4 h-4 mr-2" />
+                                                        {position.department}
+                                                    </div>
+                                                    <div className="flex items-center">
+                                                        <Globe className="w-4 h-4 mr-2" />
+                                                        {position.location}
+                                                    </div>
+                                                    <div className="px-3 py-1 bg-gray-100 rounded-full text-xs font-medium">
+                                                        {position.type}
+                                                    </div>
                                                 </div>
                                             </div>
+                                            <Link href="/contact">
+                                                <Button
+                                                    variant="outline"
+                                                    size="sm"
+                                                >
+                                                    Apply Now
+                                                    <ArrowRight className="ml-2 w-4 h-4" />
+                                                </Button>
+                                            </Link>
                                         </div>
-                                        <Link href="/contact">
-                                            <Button variant="outline" size="sm">
-                                                Apply Now
-                                                <ArrowRight className="ml-2 w-4 h-4" />
-                                            </Button>
-                                        </Link>
-                                    </div>
-                                </Card>
-                            </motion.div>
-                        ))}
-                    </motion.div>
+                                    </Card>
+                                </motion.div>
+                            ))}
+                        </motion.div>
+                    ) : (
+                        <div className="text-center py-16 bg-gray-50 rounded-xl border-2 border-dashed border-gray-200 max-w-3xl mx-auto">
+                            <p className="text-gray-500 text-xl font-medium mb-2">
+                                No open positions at the moment.
+                            </p>
+                            <p className="text-gray-400">
+                                We're always looking for talent. Check back soon
+                                or send us your resume.
+                            </p>
+                        </div>
+                    )}
 
                     <div className="text-center mt-12">
                         <p className="text-gray-600 mb-6">

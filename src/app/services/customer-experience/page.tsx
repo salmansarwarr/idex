@@ -51,7 +51,7 @@ const features = [
         icon: Globe,
         title: "Global Reach",
         description:
-            "Multilingual support teams serving customers in 40+ languages.",
+            "Multilingual support teams capable of serving global customers.",
     },
     {
         icon: Headphones,
@@ -62,8 +62,8 @@ const features = [
 ];
 
 const benefits = [
-    "Reduce operational costs by up to 40%",
-    "Improve customer satisfaction scores by 35%",
+    "Reduce operational costs",
+    "Improve customer satisfaction scores",
     "Scale support operations rapidly",
     "Access advanced AI and automation tools",
     "Gain actionable insights from customer data",
@@ -230,13 +230,13 @@ export default function CustomerExperiencePage() {
                                                 Customer Satisfaction
                                             </span>
                                             <span className="text-brand-primary font-bold">
-                                                98%
+                                                Target: 95%+
                                             </span>
                                         </div>
                                         <div className="w-full bg-gray-200 rounded-full h-2">
                                             <div
                                                 className="bg-brand-primary h-2 rounded-full"
-                                                style={{ width: "98%" }}
+                                                style={{ width: "0%" }}
                                             />
                                         </div>
                                     </div>
@@ -247,13 +247,13 @@ export default function CustomerExperiencePage() {
                                                 First Call Resolution
                                             </span>
                                             <span className="text-brand-primary font-bold">
-                                                87%
+                                                Target: 85%+
                                             </span>
                                         </div>
                                         <div className="w-full bg-gray-200 rounded-full h-2">
                                             <div
                                                 className="bg-brand-primary h-2 rounded-full"
-                                                style={{ width: "87%" }}
+                                                style={{ width: "0%" }}
                                             />
                                         </div>
                                     </div>
@@ -264,13 +264,13 @@ export default function CustomerExperiencePage() {
                                                 Average Response Time
                                             </span>
                                             <span className="text-brand-primary font-bold">
-                                                &lt;30s
+                                                Target: &lt;60s
                                             </span>
                                         </div>
                                         <div className="w-full bg-gray-200 rounded-full h-2">
                                             <div
                                                 className="bg-brand-primary h-2 rounded-full"
-                                                style={{ width: "95%" }}
+                                                style={{ width: "0%" }}
                                             />
                                         </div>
                                     </div>

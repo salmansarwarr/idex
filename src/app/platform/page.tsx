@@ -32,9 +32,9 @@ const features = [
     },
     {
         icon: Zap,
-        title: "Real-Time Processing",
+        title: "High-Performance Processing",
         description:
-            "Process millions of transactions per second with sub-millisecond latency.",
+            "Scalable architecture designed for high throughput and low-latency operations.",
     },
     {
         icon: Puzzle,
@@ -58,7 +58,7 @@ const features = [
         icon: Globe,
         title: "Global Scalability",
         description:
-            "Auto-scaling infrastructure deployed across 15+ regions worldwide.",
+            "Geo-distributed infrastructure capable of scaling across multiple regions.",
     },
 ];
 

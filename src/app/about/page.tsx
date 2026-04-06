@@ -51,10 +51,10 @@ const values = [
 ];
 
 const stats = [
-    { value: "2010", label: "Founded" },
-    { value: "5,000+", label: "Employees Worldwide" },
-    { value: "20+", label: "Countries" },
-    { value: "$500M+", label: "Annual Revenue" },
+    { value: "2026", label: "Founded" },
+    { value: "10+", label: "Expert Team Members" },
+    { value: "Remote", label: "First Operations" },
+    { value: "Startup", label: "Organization Stage" },
 ];
 
 export default function AboutPage() {
@@ -70,7 +70,7 @@ export default function AboutPage() {
                         className="max-w-4xl mx-auto text-center"
                     >
                         <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-4 sm:mb-6 px-2 sm:px-0">
-                            Transforming Businesses Since 2010
+                            Building the Future of Digital Experience
                         </h1>
                         <p className="text-lg sm:text-xl text-white/90 px-4 sm:px-0">
                             We are a global leader in customer experience and
@@ -227,49 +227,48 @@ export default function AboutPage() {
                             Global Presence, Local Expertise
                         </h2>
                         <p className="text-xl text-gray-600 mb-12">
-                            With operations in over 20 countries across 5
-                            continents, we combine global scale with deep local
-                            market knowledge to deliver exceptional results for
-                            our clients worldwide.
+                            With a vision to scale worldwide, we are starting
+                            with a dedicated team focused on delivering
+                            exceptional results for our first partners.
                         </p>
 
                         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-left">
                             <Card padding="lg">
                                 <h3 className="text-xl font-bold text-black mb-3">
-                                    North America
+                                    Our Headquarters
                                 </h3>
                                 <p className="text-gray-600 mb-4">
-                                    Headquarters in New York with offices across
-                                    the United States and Canada.
+                                    Operating from our central hub as we scale
+                                    our remote-first organization.
                                 </p>
                                 <p className="text-sm text-brand-primary font-medium">
-                                    5 Offices • 2,000+ Employees
+                                    New York • Core Team
                                 </p>
                             </Card>
 
                             <Card padding="lg">
                                 <h3 className="text-xl font-bold text-black mb-3">
-                                    Europe
+                                    Global Vision
                                 </h3>
                                 <p className="text-gray-600 mb-4">
-                                    Strategic locations in London, Berlin,
-                                    Paris, and Amsterdam serving EMEA markets.
+                                    Planning expansion into EMEA and APAC
+                                    markets with local talent and expertise.
                                 </p>
                                 <p className="text-sm text-brand-primary font-medium">
-                                    8 Offices • 1,500+ Employees
+                                    Remote-First • Growing Team
                                 </p>
                             </Card>
 
                             <Card padding="lg">
                                 <h3 className="text-xl font-bold text-black mb-3">
-                                    Asia Pacific
+                                    Partnerships
                                 </h3>
                                 <p className="text-gray-600 mb-4">
-                                    Growing presence in Singapore, Tokyo,
-                                    Sydney, and Mumbai with 24/7 operations.
+                                    Actively seeking early partners to join us
+                                    in shaping the future of enterprise tech.
                                 </p>
                                 <p className="text-sm text-brand-primary font-medium">
-                                    7 Offices • 1,500+ Employees
+                                    24/7 Operations • Dedicated Support
                                 </p>
                             </Card>
                         </div>

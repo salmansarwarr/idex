@@ -66,23 +66,23 @@ const useCases = [
         title: "Demand Forecasting",
         description:
             "Predict future demand with 95% accuracy to optimize inventory.",
-        impact: "30% reduction in inventory costs",
+        impact: "Significant cost optimization",
     },
     {
         title: "Churn Prediction",
         description: "Identify at-risk customers before they leave.",
-        impact: "25% improvement in retention",
+        impact: "Improved customer loyalty",
     },
     {
         title: "Fraud Detection",
         description:
             "Real-time fraud detection with machine learning algorithms.",
-        impact: "99.5% accuracy rate",
+        impact: "High detection accuracy",
     },
     {
         title: "Personalization Engine",
         description: "Deliver personalized experiences at scale.",
-        impact: "40% increase in engagement",
+        impact: "Increased user engagement",
     },
 ];
 
@@ -90,7 +90,7 @@ const benefits = [
     "Make data-driven decisions with confidence",
     "Automate complex processes and workflows",
     "Uncover hidden patterns and insights",
-    "Improve operational efficiency by 45%",
+    "Improve operational efficiency",
     "Reduce costs through intelligent optimization",
     "Scale AI capabilities across your organization",
 ];

@@ -14,9 +14,9 @@ import { Globe, Shield, TrendingUp, Clock, Zap, Award } from "lucide-react";
 const features = [
     {
         icon: Globe,
-        title: "Global Reach, Local Expertise",
+        title: "Global Vision, Local Approach",
         description:
-            "Operations in 20+ countries with deep local market knowledge and cultural understanding.",
+            "Building a global network with deep local market understanding and cultural resonance.",
     },
     {
         icon: Shield,
@@ -26,9 +26,9 @@ const features = [
     },
     {
         icon: TrendingUp,
-        title: "Proven Track Record",
+        title: "Focus on Results",
         description:
-            "500+ successful implementations for Fortune 500 companies worldwide.",
+            "Dedicated to delivering measurable business impact and long-term success.",
     },
     {
         icon: Clock,
@@ -77,8 +77,9 @@ export default function WhyChooseUs() {
                         variants={staggerItem}
                         className="text-xl text-gray-600 max-w-3xl mx-auto"
                     >
-                        We combine global scale with local expertise to deliver
-                        exceptional results that drive your business forward.
+                        We combine innovative solutions with deep dedication to
+                        deliver exceptional results that drive your business
+                        forward.
                     </motion.p>
                 </motion.div>
 

@@ -62,9 +62,9 @@ const features = [
 ];
 
 const benefits = [
-    "Accelerate time-to-market by 50%",
-    "Reduce infrastructure costs by 35%",
-    "Improve system reliability to 99.9% uptime",
+    "Accelerate time-to-market",
+    "Reduce infrastructure costs",
+    "Improve system reliability and uptime",
     "Scale seamlessly with business growth",
     "Enhance security and compliance",
     "Access cutting-edge technology expertise",
