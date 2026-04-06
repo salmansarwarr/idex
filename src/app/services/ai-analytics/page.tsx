@@ -65,7 +65,7 @@ const useCases = [
     {
         title: "Demand Forecasting",
         description:
-            "Predict future demand with 95% accuracy to optimize inventory.",
+            "Predict future demand with high accuracy to optimize inventory.",
         impact: "Significant cost optimization",
     },
     {

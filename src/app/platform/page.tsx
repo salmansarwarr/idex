@@ -40,7 +40,7 @@ const features = [
         icon: Puzzle,
         title: "Easy Integration",
         description:
-            "Connect with 200+ enterprise systems via pre-built connectors and APIs.",
+            "Connect with enterprise systems via pre-built connectors and APIs.",
     },
     {
         icon: BarChart,
@@ -238,7 +238,7 @@ export default function PlatformPage() {
                                     <Lock className="w-8 h-8 text-brand-primary" />
                                 </div>
                                 <h3 className="text-2xl font-bold text-black mb-4">
-                                    99.99% Uptime SLA
+                                    Premium Uptime SLA
                                 </h3>
                                 <p className="text-gray-600 mb-6">
                                     Our platform is built on redundant, globally
@@ -251,13 +251,13 @@ export default function PlatformPage() {
                                             Uptime
                                         </span>
                                         <span className="text-brand-primary font-bold">
-                                            99.99%
+                                            High Availability
                                         </span>
                                     </div>
                                     <div className="w-full bg-gray-200 rounded-full h-2">
                                         <div
                                             className="bg-brand-primary h-2 rounded-full"
-                                            style={{ width: "99.99%" }}
+                                            style={{ width: "100%" }}
                                         />
                                     </div>
                                     <div className="pt-4 border-t border-gray-200">

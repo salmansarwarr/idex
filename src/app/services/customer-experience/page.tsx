@@ -230,7 +230,7 @@ export default function CustomerExperiencePage() {
                                                 Customer Satisfaction
                                             </span>
                                             <span className="text-brand-primary font-bold">
-                                                Target: 95%+
+                                                Excellence
                                             </span>
                                         </div>
                                         <div className="w-full bg-gray-200 rounded-full h-2">
@@ -247,7 +247,7 @@ export default function CustomerExperiencePage() {
                                                 First Call Resolution
                                             </span>
                                             <span className="text-brand-primary font-bold">
-                                                Target: 85%+
+                                                Efficiency
                                             </span>
                                         </div>
                                         <div className="w-full bg-gray-200 rounded-full h-2">
@@ -264,7 +264,7 @@ export default function CustomerExperiencePage() {
                                                 Average Response Time
                                             </span>
                                             <span className="text-brand-primary font-bold">
-                                                Target: &lt;60s
+                                                Real-time
                                             </span>
                                         </div>
                                         <div className="w-full bg-gray-200 rounded-full h-2">

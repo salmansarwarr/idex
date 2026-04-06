@@ -207,7 +207,7 @@ export default function CareersPage() {
                                             Core Team
                                         </span>
                                         <span className="text-brand-primary font-bold text-2xl">
-                                            10+
+                                            Growing
                                         </span>
                                     </div>
                                     <div className="flex justify-between items-center">
@@ -237,7 +237,7 @@ export default function CareersPage() {
                                     Join Our Journey
                                 </h3>
                                 <div className="text-5xl font-bold mb-2">
-                                    100%
+                                    Full
                                 </div>
                                 <p className="text-white/90">
                                     Commitment to innovation and employee

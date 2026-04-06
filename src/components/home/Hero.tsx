@@ -33,7 +33,7 @@ export default function Hero() {
                     >
                         <span className="w-2 h-2 bg-brand-primary rounded-full mr-2 animate-pulse" />
                         <span className="text-xs sm:text-sm font-medium text-brand-primary">
-                            Trusted by 500+ Global Enterprises
+                            Trusted by Global Enterprises
                         </span>
                     </motion.div>
 
@@ -171,13 +171,12 @@ export default function Hero() {
                                 },
                             },
                         }}
-                        className="grid grid-cols-2 md:grid-cols-4 gap-6 sm:gap-8 max-w-4xl mx-auto px-4 sm:px-0"
+                        className="grid grid-cols-1 md:grid-cols-3 gap-8 py-12 border-t border-gray-200"
                     >
                         {[
-                            { value: "500+", label: "Enterprise Clients" },
-                            { value: "20+", label: "Countries" },
-                            { value: "98%", label: "Client Satisfaction" },
-                            { value: "24/7", label: "Global Support" },
+                            { value: "Global", label: "Enterprise Support" },
+                            { value: "Reliable", label: "Scalable Solutions" },
+                            { value: "Proven", label: "Industry Expertise" },
                         ].map((stat, index) => (
                             <motion.div
                                 key={index}

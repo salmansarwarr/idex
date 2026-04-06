@@ -51,8 +51,8 @@ const values = [
 ];
 
 const stats = [
-    { value: "2026", label: "Founded" },
-    { value: "10+", label: "Expert Team Members" },
+    { value: "Upcoming", label: "Founded" },
+    { value: "Expert", label: "Team Members" },
     { value: "Remote", label: "First Operations" },
     { value: "Startup", label: "Organization Stage" },
 ];
