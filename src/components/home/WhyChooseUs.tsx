@@ -22,7 +22,7 @@ const features = [
         icon: Shield,
         title: "Enterprise-Grade Security",
         description:
-            "SOC 2, ISO 27001 certified with bank-level data protection and compliance.",
+            "Built with enterprise-grade data protection and security best practices from day one.",
     },
     {
         icon: TrendingUp,

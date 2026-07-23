@@ -33,7 +33,7 @@ export default function Hero() {
                     >
                         <span className="w-2 h-2 bg-brand-primary rounded-full mr-2 animate-pulse" />
                         <span className="text-xs sm:text-sm font-medium text-brand-primary">
-                            Trusted by Global Enterprises
+                            Now Onboarding Early Partners
                         </span>
                     </motion.div>
 

@@ -8,7 +8,7 @@ import Textarea from "@/components/ui/Textarea";
 import Button from "@/components/ui/Button";
 import Card from "@/components/ui/Card";
 import { fadeIn, slideUp } from "@/lib/animations";
-import { Mail, Phone, MapPin, Clock } from "lucide-react";
+import { Mail, Phone } from "lucide-react";
 
 interface ContactFormData {
     name: string;
@@ -200,10 +200,10 @@ export default function ContactPage() {
                                                 Email
                                             </p>
                                             <a
-                                                href="mailto:info@enterprise.com"
+                                                href="mailto:muhammadsalmansarwar32@gmail.com"
                                                 className="text-sm sm:text-base text-gray-600 hover:text-brand-primary transition-colors break-all"
                                             >
-                                                info@enterprise.com
+                                                muhammadsalmansarwar32@gmail.com
                                             </a>
                                         </div>
                                     </div>
@@ -217,80 +217,12 @@ export default function ContactPage() {
                                                 Phone
                                             </p>
                                             <a
-                                                href="tel:+1234567890"
+                                                href="tel:+923082669537"
                                                 className="text-gray-600 hover:text-brand-primary transition-colors"
                                             >
-                                                +1 (234) 567-890
+                                                +92 308 2669537
                                             </a>
                                         </div>
-                                    </div>
-
-                                    <div className="flex items-start space-x-4">
-                                        <div className="w-12 h-12 bg-brand-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
-                                            <MapPin className="w-6 h-6 text-brand-primary" />
-                                        </div>
-                                        <div>
-                                            <p className="font-semibold text-black mb-1">
-                                                Headquarters
-                                            </p>
-                                            <p className="text-gray-600">
-                                                123 Business Avenue
-                                                <br />
-                                                New York, NY 10001
-                                                <br />
-                                                United States
-                                            </p>
-                                        </div>
-                                    </div>
-
-                                    <div className="flex items-start space-x-4">
-                                        <div className="w-12 h-12 bg-brand-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
-                                            <Clock className="w-6 h-6 text-brand-primary" />
-                                        </div>
-                                        <div>
-                                            <p className="font-semibold text-black mb-1">
-                                                Business Hours
-                                            </p>
-                                            <p className="text-gray-600">
-                                                Monday - Friday: 9:00 AM - 6:00
-                                                PM EST
-                                                <br />
-                                                24/7 Support Available
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </Card>
-
-                            {/* Office Locations */}
-                            <Card padding="lg">
-                                <h3 className="text-2xl font-bold text-black mb-4">
-                                    Global Offices
-                                </h3>
-                                <div className="space-y-4">
-                                    <div>
-                                        <p className="font-semibold text-black">
-                                            North America
-                                        </p>
-                                        <p className="text-sm text-gray-600">
-                                            New York, San Francisco, Toronto
-                                        </p>
-                                    </div>
-                                    <div>
-                                        <p className="font-semibold text-black">
-                                            Europe
-                                        </p>
-                                        <p className="text-sm text-gray-600">
-                                            London, Berlin, Paris
-                                        </p>
-                                    </div>
-                                    <div>
-                                        <p className="font-semibold text-black">
-                                            Asia Pacific
-                                        </p>
-                                        <p className="text-sm text-gray-600">
-                                            Singapore, Tokyo, Sydney
-                                        </p>
                                     </div>
                                 </div>
                             </Card>

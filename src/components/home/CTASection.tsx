@@ -40,9 +40,9 @@ export default function CTASection() {
                         transition={{ delay: 0.2 }}
                         className="text-xl mb-10 text-white/90"
                     >
-                        Join the global enterprises who trust us to deliver
-                        exceptional results. Let's discuss how we can help you
-                        achieve your business goals.
+                        Be one of our first partners and help shape what we
+                        build. Let's discuss how we can help you achieve your
+                        business goals.
                     </motion.p>
                     <motion.div
                         variants={slideUp}

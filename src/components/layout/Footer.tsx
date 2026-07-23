@@ -3,7 +3,7 @@
 import React from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { Mail, Phone, MapPin, Linkedin, Twitter, Facebook } from "lucide-react";
+import { Mail, Phone } from "lucide-react";
 import { scatterContainer, scatterItem, fadeIn } from "@/lib/animations";
 
 const footerLinks = {
@@ -32,12 +32,6 @@ const footerLinks = {
         { name: "Security", href: "/security" },
     ],
 };
-
-const socialLinks = [
-    { name: "LinkedIn", href: "#", icon: Linkedin },
-    { name: "Twitter", href: "#", icon: Twitter },
-    { name: "Facebook", href: "#", icon: Facebook },
-];
 
 export default function Footer() {
     const currentYear = new Date().getFullYear();
@@ -74,24 +68,20 @@ export default function Footer() {
                             <div className="flex items-center space-x-3 text-gray-400">
                                 <Mail className="w-5 h-5 text-brand-primary" />
                                 <a
-                                    href="mailto:info@enterprise.com"
+                                    href="mailto:muhammadsalmansarwar32@gmail.com"
                                     className="hover:text-white transition-colors"
                                 >
-                                    info@enterprise.com
+                                    muhammadsalmansarwar32@gmail.com
                                 </a>
                             </div>
                             <div className="flex items-center space-x-3 text-gray-400">
                                 <Phone className="w-5 h-5 text-brand-primary" />
                                 <a
-                                    href="tel:+1234567890"
+                                    href="tel:+923082669537"
                                     className="hover:text-white transition-colors"
                                 >
-                                    +1 (234) 567-890
+                                    +923082669537
                                 </a>
-                            </div>
-                            <div className="flex items-center space-x-3 text-gray-400">
-                                <MapPin className="w-5 h-5 text-brand-primary" />
-                                <span>Global Headquarters, New York, USA</span>
                             </div>
                         </div>
                     </div>
@@ -222,38 +212,6 @@ export default function Footer() {
                                 </Link>
                             ))}
                         </div>
-
-                        {/* Social Links with Scatter Animation */}
-                        <motion.div
-                            initial="hidden"
-                            whileInView="visible"
-                            viewport={{ once: true }}
-                            variants={scatterContainer}
-                            className="flex items-center space-x-4"
-                        >
-                            {socialLinks.map((social) => {
-                                const Icon = social.icon;
-                                return (
-                                    <motion.a
-                                        key={social.name}
-                                        href={social.href}
-                                        variants={scatterItem}
-                                        whileHover={{
-                                            scale: 1.2,
-                                            rotate: [0, -10, 10, -10, 0],
-                                            transition: {
-                                                duration: 0.5,
-                                            },
-                                        }}
-                                        whileTap={{ scale: 0.9 }}
-                                        className="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-brand-primary transition-colors"
-                                        aria-label={social.name}
-                                    >
-                                        <Icon className="w-5 h-5" />
-                                    </motion.a>
-                                );
-                            })}
-                        </motion.div>
                     </div>
                 </div>
             </div>
